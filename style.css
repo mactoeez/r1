@@ -112,7 +112,21 @@ nav a:hover {
         display: flex;
     }
 }
+/* Mobile view fix */
+@media screen and (max-width: 768px) {
+    table {
+        table-layout: fixed;  /* Makes wrapping predictable */
+        width: 100%;
+    }
 
+    td, th {
+        white-space: normal;  /* Allows text to wrap */
+        word-wrap: break-word; /* Breaks long words */
+        overflow-wrap: break-word; /* Better browser support */
+        padding: 8px;
+        vertical-align: top; /* Keeps text aligned neatly at the top */
+    }
+}
 /* Section Styles */
 section {
     padding: 40px 20px; /* keeps spacing */
